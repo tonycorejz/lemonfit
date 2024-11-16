@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Navigation, Controller } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import Image, { StaticImageData } from 'next/image';
 import { HTMLProps, useState } from 'react';
 import { Swiper as SwiperType } from 'swiper/types';
@@ -17,10 +17,7 @@ interface Props extends HTMLProps<HTMLDivElement> {
 }
 
 export const InstructorCardGallery: React.FC<Props> = ({instructorGallery, uniqueValueForSliderClass, ...props}) => {
-
-    const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
     
-
     return (
         <div className={`relative mx-auto flex items-center justify-center ${props.className}`}>
             <Swiper

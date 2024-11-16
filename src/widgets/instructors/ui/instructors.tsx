@@ -1,6 +1,5 @@
 import { Instructor, Title } from "@/shared";
 import { HTMLProps } from "react";
-import { InstructorCardGallery } from "./instructor-card/instructor-card-gallery";
 
 import instrucrorPhoto_1_1 from '../../../../public/img/instructors/drozdov-alexey/1.jpg';
 import instrucrorPhoto_1_2 from '../../../../public/img/instructors/drozdov-alexey/2.jpg';

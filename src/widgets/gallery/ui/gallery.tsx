@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, HtmlHTMLAttributes, HTMLProps } from 'react';
+import React, { HTMLProps } from 'react';
 import { Title } from '@/shared';
 import { ArrowLink, SocialIcons } from '@/shared/ui/links';
 import { Slider } from './slider';

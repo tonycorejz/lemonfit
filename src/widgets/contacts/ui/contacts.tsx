@@ -2,7 +2,6 @@ import { Title } from "@/shared";
 import { ArrowLink, SocialIcons } from "@/shared/ui/links";
 import { YaMap } from "@/shared";
 import Link from "next/link";
-import Script from "next/script";
 import { HTMLProps } from "react";
 
 export const Contacts: React.FC<HTMLProps<HTMLDivElement>> = ({...props}) => {

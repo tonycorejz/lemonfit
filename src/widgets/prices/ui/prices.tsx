@@ -1,5 +1,5 @@
 import { CardCheckoutModal } from "@/features";
-import { CallMeBtn, Card, GetCardButton, Title } from "@/shared";
+import { Card, GetCardButton, Title } from "@/shared";
 import { HTMLProps } from "react";
 
 

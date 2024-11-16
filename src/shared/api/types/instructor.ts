@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 
 export interface Instructor {
-    id: Number;
+    id: number;
     gallery: StaticImageData[];
     name: string;
     achievements: string[];

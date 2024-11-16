@@ -2,7 +2,6 @@
 
 import { Logo, MenuLink, TogleMenuBtn } from "@/shared";
 import { SocialIcons } from "@/shared/ui/links";
-import Link from "next/link";
 import { useState } from "react";
 import { AdditionalMenuLinks } from "./additionsl-menu-links";
 
