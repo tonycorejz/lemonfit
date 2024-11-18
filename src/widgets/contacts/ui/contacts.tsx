@@ -42,7 +42,7 @@ export const Contacts: React.FC<HTMLProps<HTMLDivElement>> = ({...props}) => {
                     </div>
                     <div className="flex flex-col lg:flex-row w-full lg:items-center">
                         <ArrowLink href='#' className='hidden lg:flex lg:me-4'>Больше в наших социальных сетях</ArrowLink>
-                        <SocialIcons className='items-center' telegram vk />
+                        <SocialIcons className='items-center' telegram vk whatsapp />
                     </div>
                 </div>
                 <div className="w-full h-52 md:max-w-[600px] md:h-64 xl:max-w-[740px]">

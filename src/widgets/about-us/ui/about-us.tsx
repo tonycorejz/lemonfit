@@ -5,8 +5,8 @@ import { Title } from "@/shared";
 export const AboutUs: React.FC = () => {
     return (
         <div className="overflow-hidden w-full flex flex-col">
-            <div className="w-full bg-[#212121] flex items-center justify-center p-6 pb-36 md:pb-10 lg:px-8">
-                <div className="flex flex-col max-w-7xl">
+            <div className="w-full bg-[#212121] flex items-center justify-center pb-36 md:pb-10">
+                <div className="flex flex-col max-w-7xl p-6 lg:px-8">
                     <Title className='text-white'>Фитнес клуб на <br/> Сибиряков-Гвардейцев</Title>
                     <p className="font-medium text-white mb-2 md:w-1/2">
                         В <b>LemonFit</b> вас ждет не просто тренировка, 

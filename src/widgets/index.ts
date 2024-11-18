@@ -7,3 +7,4 @@ export {CallToAction} from './call-to-action';
 export {Footer} from './footer';
 export {Prices} from './prices';
 export * from './instructors';
+export * from './stocks';

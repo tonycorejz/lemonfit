@@ -9,18 +9,21 @@ import { AdditionalMenuLinks } from "./additionsl-menu-links";
 export const Header: React.FC = () => {
 
     const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState<boolean>(false);
+    const closeMenu = () => setMobileMenuIsOpen(false);
+    const openMenu = () => setMobileMenuIsOpen(true);
 
     return (
-        <header className="w-full">
+        <header className="w-full sticky top-0 bg-white z-50">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Навигация по сайту">
                 <div className="flex lg:flex-1 me-2">
                     <Logo/>
                 </div>
                 <div className="flex lg:hidden">
-                    <TogleMenuBtn active={mobileMenuIsOpen} onClick={() => setMobileMenuIsOpen(true)}/>
+                    <TogleMenuBtn active={mobileMenuIsOpen} onClick={openMenu}/>
                 </div>
                 <div className="hidden lg:flex lg:items-center">
                     <MenuLink className="me-3 xl:me-5" href='/#gallery'>Тренажерный зал</MenuLink>
+                    <MenuLink className="me-3 xl:me-5" href='/#instructors'>Тренеры</MenuLink>
                     <MenuLink className="me-3 xl:me-5" href='/#contacts'>Контакты</MenuLink>
                     <MenuLink className="me-3 xl:me-5" href='/#prices'>Цены</MenuLink>
                     <AdditionalMenuLinks schedulClassName="me-3" lkClassName="me-5" />
@@ -32,17 +35,18 @@ export const Header: React.FC = () => {
                 <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <Logo/>
-                        <TogleMenuBtn active={mobileMenuIsOpen} onClick={() => setMobileMenuIsOpen(false)} />
+                        <TogleMenuBtn active={mobileMenuIsOpen} onClick={closeMenu} />
                     </div>
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/10">
                             <div className="space-y-2 py-6">
-                                <MenuLink className="-mx-3 block px-3 py-2 text-base leading-7" href='/#gallery'>Тренажерный зал</MenuLink>
-                                <MenuLink className="-mx-3 block px-3 py-2 text-base leading-7" href='/#contacts'>Контакты</MenuLink>
-                                <MenuLink className="-mx-3 block px-3 py-2 text-base leading-7" href='/#prices'>Цены</MenuLink>
+                                <MenuLink className="-mx-3 block px-3 py-2 text-base leading-7" href='/#gallery' onClick={closeMenu}>Тренажерный зал</MenuLink>
+                                <MenuLink className="-mx-3 block px-3 py-2 text-base leading-7" href='/#instructors' onClick={closeMenu}>Тренеры</MenuLink>
+                                <MenuLink className="-mx-3 block px-3 py-2 text-base leading-7" href='/#contacts' onClick={closeMenu}>Контакты</MenuLink>
+                                <MenuLink className="-mx-3 block px-3 py-2 text-base leading-7" href='/#prices' onClick={closeMenu}>Цены</MenuLink>
                             </div>
                             <div className="py-6">
-                                <AdditionalMenuLinks schedulClassName="w-48 mb-3" lkClassName="w-48" />
+                                <AdditionalMenuLinks onLinkClick={closeMenu} schedulClassName="w-48 mb-3" lkClassName="w-48" />
                             </div>
                             <SocialIcons className="py-6" telegram vk whatsapp />
                         </div>
