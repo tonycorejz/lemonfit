@@ -1,14 +1,14 @@
 'use client';
 
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Card, CardCheckoutForm } from "@/shared";
+import { PriceCard, CardCheckoutForm } from "@/shared";
 import { SocialIcons } from "@/shared/ui/links";
 import Link from "next/link";
 import { useState } from "react";
 
 interface Props {
     children: React.ReactNode;
-    card: Card;
+    card: PriceCard;
 }
 
 export const CardCheckoutModal: React.FC<Props> = ({children, card}) => {

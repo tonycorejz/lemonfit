@@ -7,12 +7,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Navigation, Pagination } from 'swiper/modules';
-import Image, { StaticImageData } from 'next/image';
+import { Autoplay, Pagination } from 'swiper/modules';
+import Image from 'next/image';
 
-import freeFirstWorkout from '../../../../public/img/stocks/freeFirstWorkout.webp';
-import qwe from '../../../../public/img/stocks/1.png';
-import qwe2 from '../../../../public/img/stocks/2.png';
+import stockImg1 from '../../../../public/img/stocks/2.png';
+import stockImg2 from '../../../../public/img/stocks/1.png';
 
 export const Stocks: React.FC<HTMLProps<HTMLDivElement>> = ({...props}) => {
 
@@ -24,19 +23,22 @@ export const Stocks: React.FC<HTMLProps<HTMLDivElement>> = ({...props}) => {
                     slidesPerView={1}
                     spaceBetween={30}
                     loop={false}
+                    autoplay={{
+                        delay: 2500,
+                    }}
                     pagination={{
                         el: '.swiper-pagination-stocks',
                         type: 'bullets',
                         clickable: true,
                     }}
                     centeredSlides={false}
-                    modules={[Pagination]}
+                    modules={[Pagination, Autoplay]}
                     className="w-full overflow-y-auto"
                     zoom={true}
                 >
                     <SwiperSlide className=''>
                         <div className="rounded-md shadow-[0_0_10px_rgba(0,0,0,0.3)] p-4 m-2 md:m-4 flex flex-col md:flex-row items-center justify-center">
-                            <Image src={qwe2} className='w-full max-w-80 pointer-events-none mb-2 md:me-4 md:mb-0' alt='' />
+                            <Image src={stockImg1} className='w-full max-w-80 pointer-events-none mb-2 md:me-4 md:mb-0' alt='' />
                             <div className="">
                                 <p className="text-xl font-black mb-4">Первое занятие бесплатно!</p>
                                 <p>
@@ -53,7 +55,7 @@ export const Stocks: React.FC<HTMLProps<HTMLDivElement>> = ({...props}) => {
                     </SwiperSlide>
                     <SwiperSlide className=''>
                         <div className="rounded-md shadow-[0_0_10px_rgba(0,0,0,0.3)] p-4 m-2 md:m-4 flex flex-col md:flex-row items-center justify-center">
-                            <Image src={qwe} className='w-full max-w-80 pointer-events-none mb-2 md:me-4 md:mb-0' alt='' />
+                            <Image src={stockImg2} className='w-full max-w-80 pointer-events-none mb-2 md:me-4 md:mb-0' alt='' />
                             <div className="">
                                 <p className="text-xl font-black mb-4">Наша бонусная система! </p>
                                 <p>Присоединяйтесь к нашей уникальной бонусной программе, которая сделает ваши тренировки не только полезными, но и приятными!</p>
