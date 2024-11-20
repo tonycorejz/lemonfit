@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useMask } from '@react-input/mask';
 import { Textarea } from "@/components/ui/textarea";
-import { Card } from "@/shared";
+import { PriceCard } from "@/shared";
 import React from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -31,7 +31,7 @@ const formSchema = z.object({
 });
 
 interface Props {
-  card: Card;
+  card: PriceCard;
   formSubmited?: () => void;
 }
 
