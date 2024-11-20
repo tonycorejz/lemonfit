@@ -59,7 +59,7 @@ const config: Config = {
   			sans: ['var(--font-inter)']
   		},
   		backgroundImage: {
-  			'trener-bg': "url('/img/gallery/16.jpeg')"
+  			'trener-bg': "url('/img/gallery/16.webp')"
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

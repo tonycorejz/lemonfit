@@ -1,5 +1,5 @@
 import Image from "next/image";
-import aboutUsImg from '../../../../public/img/about-us-image.png';
+import aboutUsImg from '../../../../public/img/about-us-image.webp';
 import { Title } from "@/shared";
 
 export const AboutUs: React.FC = () => {

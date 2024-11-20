@@ -1,5 +1,5 @@
 import Image from "next/image";
-import callToActionImg from '../../../../public/img/call-to-action-image.png';
+import callToActionImg from '../../../../public/img/call-to-action-image.webp';
 import { CallMeBtn, Title } from "@/shared";
 import { CallMeBackModal } from "@/features";
 

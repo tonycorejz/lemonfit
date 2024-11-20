@@ -28,12 +28,12 @@ export const InstructorCardGallery: React.FC<Props> = ({instructorGallery, uniqu
                 }}
                 centeredSlides={true}
                 modules={[Navigation]}
-                className="w-full overflow-y-auto h-96"
+                className="w-full overflow-y-auto h-96 lg:h-[500px]"
                 zoom={true}
             >
                 {
                     instructorGallery.map(img => 
-                        <SwiperSlide className='my-auto ' key={img.src}><Image src={img} className='object-cover w-full h-full block rounded-lg pointer-events-none' alt='' /></SwiperSlide>
+                        <SwiperSlide className='my-auto' key={img.src}><Image src={img} className='object-cover w-full h-full block rounded-lg pointer-events-none' alt='' /></SwiperSlide>
                     )
                 }
             </Swiper>

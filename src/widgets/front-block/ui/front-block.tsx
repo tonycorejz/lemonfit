@@ -1,6 +1,6 @@
 import { CallMeBtn } from "@/shared";
 import Image from "next/image";
-import frotnImg from '../../../../public/img/front-image.jpeg';
+import frotnImg from '../../../../public/img/front-image.webp';
 import { ArrowLink } from "@/shared/ui/links";
 import { CallMeBackModal } from "@/features";
 

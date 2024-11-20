@@ -3,7 +3,7 @@ export interface PriceInfo {
     textInfo: string;
 };
 
-export interface Card {
+export interface PriceCard {
     title?: string;
     subtitle?: string;
     onlyDay?: PriceInfo;

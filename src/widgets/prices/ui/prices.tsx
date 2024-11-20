@@ -1,18 +1,18 @@
 import { CardCheckoutModal } from "@/features";
-import { Card, GetCardButton, Title } from "@/shared";
+import { PriceCard, GetCardButton, Title } from "@/shared";
 import { HTMLProps } from "react";
 
 
 
-const cards: Card[] = [
+const cards: PriceCard[] = [
     {
         title: "8 занятий",
         onlyDay: {
-            price: '1 100₽',
+            price: '1 490₽',
             textInfo: 'пн-пт 07:00-17:00\nсб-вс 09:00-21:00',
         },
         full: {
-            price: '1 550₽',
+            price: '1 900₽',
             textInfo: 'пн-пт 07:00-23:00\nсб-вс 09:00-21:00',
         },
     },
@@ -20,11 +20,11 @@ const cards: Card[] = [
         title: "1 месяц",
         subtitle: 'безлимит',
         onlyDay: {
-            price: '1 900₽',
+            price: '2 190₽',
             textInfo: 'пн-пт 07:00-17:00\nсб-вс 09:00-21:00',
         },
         full: {
-            price: '2 450₽',
+            price: '2 799₽',
             textInfo: 'пн-пт 07:00-23:00\nсб-вс 09:00-21:00',
         },
     },
@@ -32,11 +32,11 @@ const cards: Card[] = [
         title: "6 месяцев",
         subtitle: 'безлимит',
         onlyDay: {
-            price: '6 750₽',
+            price: '7 490₽',
             textInfo: 'пн-пт 07:00-17:00\nсб-вс 09:00-21:00',
         },
         full: {
-            price: '8 350₽',
+            price: '9 499₽',
             textInfo: 'пн-пт 07:00-23:00\nсб-вс 09:00-21:00',
         },
     },
@@ -44,17 +44,19 @@ const cards: Card[] = [
         title: "12 месяцев",
         subtitle: 'безлимит',
         onlyDay: {
-            price: '10 900₽',
+            price: '12 290₽',
             textInfo: 'пн-пт 07:00-17:00\nсб-вс 09:00-21:00',
         },
         full: {
-            price: '14 250₽',
+            price: '15 999₽',
             textInfo: 'пн-пт 07:00-23:00\nсб-вс 09:00-21:00',
         },
     },
 ]
 
+
 export const Prices: React.FC<HTMLProps<HTMLDivElement>> = ({...props}) => {
+
     return (
         <div {...props} className={`w-full max-w-7xl flex flex-col p-6 lg:px-8 ${props.className}`}>
             <Title className=''>Клубные карты</Title>
@@ -96,13 +98,13 @@ export const Prices: React.FC<HTMLProps<HTMLDivElement>> = ({...props}) => {
                             <div className="text-xl font-black leading-5">Персональный тренер</div>
                             <div className="">1 месяц</div>
                         </div>
-                        <div className="text-[#24A943] text-xl font-bold text-nowrap leading-5">6 000₽</div>
+                        <div className="text-[#24A943] text-xl font-bold text-nowrap leading-5">6 500₽</div>
                     </div>
                     <div className="w-full flex flex-row justify-between items-start mb-4">
                         <div className="flex flex-col me-1">
                             <div className="text-xl font-black leading-5">Разовое посещение</div>
                         </div>
-                        <div className="text-[#24A943] text-xl font-bold text-nowrap leading-5">550₽</div>
+                        <div className="text-[#24A943] text-xl font-bold text-nowrap leading-5">600₽</div>
                     </div>
                     <div className="w-full flex flex-row justify-between items-start mb-4">
                         <div className="flex flex-col me-2">
