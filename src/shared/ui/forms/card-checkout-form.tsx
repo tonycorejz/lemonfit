@@ -62,7 +62,9 @@ export const CardCheckoutForm: React.FC<Props> = ({card, formSubmited}) => {
         message: `Пользователь с номером телефона ${values.phone} Оставил сообщение: ${values.questions}`
       }),
     });
+
     const {ok, description} = await res.json();
+
     if(ok) {
       toast({
         title: "Отправка формы произошла успешно!",
@@ -71,10 +73,11 @@ export const CardCheckoutForm: React.FC<Props> = ({card, formSubmited}) => {
     } else {
       toast({
         title: "Во время отправки формы произошла ошибка",
-        description: "Пожалуйста вяжитесь с нами по телефону или через соц. сети",
+        description: "Пожалуйста вяжитесь с нами по телефону или через соц. сети. " + description,
       })
     }
-    formSubmited && formSubmited();
+    
+    if(formSubmited !== undefined) formSubmited();
   };
 
   return (

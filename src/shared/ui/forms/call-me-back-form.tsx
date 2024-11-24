@@ -55,7 +55,9 @@ export const CallMeBackForm: React.FC<Props> = ({formSubmited}) => {
         message: `Пользователь с номером телефона ${values.phone} ожидает вашего звонка.`
       }),
     });
+    
     const {ok, description} = await res.json();
+
     if(ok) {
       toast({
         title: "Отправка формы произошла успешно!",
@@ -64,10 +66,11 @@ export const CallMeBackForm: React.FC<Props> = ({formSubmited}) => {
     } else {
       toast({
         title: "Во время отправки формы произошла ошибка",
-        description: "Пожалуйста вяжитесь с нами по телефону или через соц. сети",
-      })
+        description: "Пожалуйста вяжитесь с нами по телефону или через соц. сети. " + description,
+      }) 
     }
-    formSubmited && formSubmited();
+
+    if(formSubmited !== undefined) formSubmited();
   };
 
   return (

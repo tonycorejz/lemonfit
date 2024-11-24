@@ -24,7 +24,8 @@ export const Stocks: React.FC<HTMLProps<HTMLDivElement>> = ({...props}) => {
                     spaceBetween={30}
                     loop={false}
                     autoplay={{
-                        delay: 2500,
+                        delay: 5000,
+                        disableOnInteraction: true,
                     }}
                     pagination={{
                         el: '.swiper-pagination-stocks',

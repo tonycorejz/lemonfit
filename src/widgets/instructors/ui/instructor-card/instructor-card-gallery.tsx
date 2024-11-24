@@ -11,7 +11,7 @@ import { HTMLProps } from 'react';
 
 interface Props extends HTMLProps<HTMLDivElement> {
     instructorGallery:  StaticImageData[];
-    uniqueValueForSliderClass: Number;
+    uniqueValueForSliderClass: number;
 }
 
 export const InstructorCardGallery: React.FC<Props> = ({instructorGallery, uniqueValueForSliderClass, ...props}) => {

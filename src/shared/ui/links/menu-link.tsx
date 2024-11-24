@@ -1,5 +1,5 @@
 import Link, { LinkProps } from "next/link";
-import { ReactElement, ReactNode } from "react";
+import { ReactNode } from "react";
 
 type Props = {
     children: ReactNode;

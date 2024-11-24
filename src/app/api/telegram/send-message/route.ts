@@ -1,21 +1,41 @@
-import { error } from "console";
-
 export async function POST(request: Request) {
   try {
-    const {message} = await request.json()
+    const {phone, message} = await request.json()
 
-    if(!message) throw error('Запрос передан без сообщения');
+    if(!message) throw Error('Запрос передан без сообщения');
 
-    if(!process.env.TELEGRAM_TOKEN) throw('TELEGRAM_TOKEN в .env файле не установлен.');
-    if(!process.env.TELEGRAM_CHAT_ID) throw('TELEGRAM_CHAT_ID в .env файле не установлен.');
+    const res = await fetch(`https://cloud.1c.fitness/api/hs/lead/Webhook/${process.env.ONE_C_WEBHOOK_ID}`,
+      {
+        method: "post",
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          phone: phone,
+          comment: message
+        })
+      }
+    )
 
-    const res = await fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_TOKEN}/sendMessage?chat_id=${process.env.TELEGRAM_CHAT_ID}&text=${message}`)
+    if(res.ok) {
+      return Response.json({ok: true});
+    }
 
-    return res;
+    return Response.json({ok: false});
   } catch (e) {
-    return Response.json(`Произошла ошибка. Ошибка: ${e}`);
+    return Response.json({description:`Описание ошибки: ${e instanceof Error ? e.message : "неизвестная ошибка"}`});
   }
 }
+
+//Отправка в телеграм
+/*
+if(!process.env.TELEGRAM_TOKEN) throw('TELEGRAM_TOKEN в .env файле не установлен.');
+if(!process.env.TELEGRAM_CHAT_ID) throw('TELEGRAM_CHAT_ID в .env файле не установлен.');
+
+const res = await fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_TOKEN}/sendMessage?chat_id=${process.env.TELEGRAM_CHAT_ID}&text=${message}`)
+
+*/
 
 //Ниже получение id чата
 /*export async function GET(request: Request) {
