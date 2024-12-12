@@ -23,12 +23,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="h-full scroll-smooth">
       <body
-        className={`${inter.variable} antialiased min-h-screen flex flex-col justify-between relative`}
+        className={`${inter.variable} antialiased h-full flex flex-col relative`}
       >
         <Header />
-        {children}
+        <div className="flex-grow">
+          {children}
+        </div>
         <Footer />
         <Toaster />
       </body>

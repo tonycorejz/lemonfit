@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
 
                 <Dialog>
                     <DialogTrigger asChild className="outline-0">
-                        <ArrowLink href='#' className=''>Прочитать отзывы о нас</ArrowLink>
+                        <ArrowLink href='#' className='cursor-pointer'>Прочитать отзывы о нас</ArrowLink>
                     </DialogTrigger>
                     <DialogContent className="sm:max-w-[425px]">
                         <DialogHeader>
