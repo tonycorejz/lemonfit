@@ -38,7 +38,7 @@ export const Stocks: React.FC<HTMLProps<HTMLDivElement>> = ({...props}) => {
                     className="w-full overflow-y-auto"
                     zoom={true}
                 >
-                    <SwiperSlide className=''>
+                    {/* <SwiperSlide className=''>
                         <div className="rounded-md shadow-[0_0_10px_rgba(0,0,0,0.3)] p-4 m-2 md:m-4 flex flex-col md:flex-row items-center justify-center">
                             <Image src={stockImg3} className='w-full max-w-80 pointer-events-none mb-2 md:me-4 md:mb-0' alt='' />
                             <div className="">
@@ -53,7 +53,7 @@ export const Stocks: React.FC<HTMLProps<HTMLDivElement>> = ({...props}) => {
                                 <p>Не упустите шанс! Акция действует только до конца года. Закажите абонемент и начните 2024 год с новых побед!</p>
                             </div>
                         </div>
-                    </SwiperSlide>
+                    </SwiperSlide> */}
                     <SwiperSlide className=''>
                         <div className="rounded-md shadow-[0_0_10px_rgba(0,0,0,0.3)] p-4 m-2 md:m-4 flex flex-col md:flex-row items-center justify-center">
                             <Image src={stockImg1} className='w-full max-w-80 pointer-events-none mb-2 md:me-4 md:mb-0' alt='' />
