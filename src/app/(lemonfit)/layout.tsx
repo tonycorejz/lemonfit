@@ -3,7 +3,6 @@ import "../globals.css";
 import { Inter } from 'next/font/google';
 import { Footer, Header } from "@/widgets";
 import { Toaster } from "@/components/ui/toaster";
-import Head from "next/head";
 
 const inter = Inter({
   weight: ['500', '700', '900'],

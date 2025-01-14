@@ -12,7 +12,6 @@ import Image from 'next/image';
 
 import stockImg1 from '../../../../public/img/stocks/2.png';
 import stockImg2 from '../../../../public/img/stocks/1.png';
-import stockImg3 from '../../../../public/img/stocks/9by6.webp';
 
 export const Stocks: React.FC<HTMLProps<HTMLDivElement>> = ({...props}) => {
 
