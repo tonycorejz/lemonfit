@@ -37,7 +37,7 @@ export const Instructors: React.FC<HTMLProps<HTMLDivElement>> = ({...props}) => 
             <Title className='w-full mb-6'>Наши тренеры</Title>
             <div className="w-full self-start grid gap-2 grid-cols-1 sm:grid-cols-2">
                 <InstructorCard instructor={drozdovAlexey}/>
-                <InstructorCard instructor={timoshkovaGalyna}/>
+                {/*<InstructorCard instructor={timoshkovaGalyna}/>*/}
             </div>
         </div>
     );
