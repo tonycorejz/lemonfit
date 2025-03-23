@@ -9,9 +9,9 @@ import instrucrorPhoto_1_5 from '../../../../public/img/instructors/drozdov-alex
 import instrucrorPhoto_1_6 from '../../../../public/img/instructors/drozdov-alexey/6.webp';
 import instrucrorPhoto_1_7 from '../../../../public/img/instructors/drozdov-alexey/7.webp';
 import instrucrorPhoto_1_8 from '../../../../public/img/instructors/drozdov-alexey/8.webp';
-import instrucrorPhoto_2_1 from '../../../../public/img/instructors/timoshkova-galyna/1.webp';
+/*import instrucrorPhoto_2_1 from '../../../../public/img/instructors/timoshkova-galyna/1.webp';
 import instrucrorPhoto_2_2 from '../../../../public/img/instructors/timoshkova-galyna/2.webp';
-import instrucrorPhoto_2_3 from '../../../../public/img/instructors/timoshkova-galyna/3.webp';
+import instrucrorPhoto_2_3 from '../../../../public/img/instructors/timoshkova-galyna/3.webp';*/
 import { InstructorCard } from "./instructor-card";
 
 const drozdovAlexey: Instructor = {
