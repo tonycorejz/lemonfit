@@ -12,6 +12,8 @@ import Image from 'next/image';
 
 import stockImg1 from '../../../../public/img/stocks/2.png';
 import stockImg2 from '../../../../public/img/stocks/1.png';
+import stockImg3 from '../../../../public/img/stocks/3.jpg';
+
 
 export const Stocks: React.FC<HTMLProps<HTMLDivElement>> = ({...props}) => {
 
@@ -53,6 +55,28 @@ export const Stocks: React.FC<HTMLProps<HTMLDivElement>> = ({...props}) => {
                             </div>
                         </div>
                     </SwiperSlide> */}
+                    <SwiperSlide className=''>
+                        <div className="rounded-md shadow-[0_0_10px_rgba(0,0,0,0.3)] p-4 m-2 md:m-4 flex flex-col md:flex-row items-center justify-center">
+                            <Image src={stockImg3} className='w-full max-w-80 pointer-events-none mb-2 md:me-4 md:mb-0 p-4' alt='' />
+                            <div className="">
+                                <p className="text-xl font-black mb-4">ОД ОТ 600₽/МЕСЯЦ! 🎁</p>
+                                <p>
+                                    Только до 21.09 держим суперцены на абонементы!
+                                </p>
+                                <p> 
+                                    6 причин успеть:✨
+                                </p>
+                                <ol className="ms-2">
+                                    <li>1️⃣ 6 лет опыта и вашего доверия!🙌</li>
+                                    <li>2️⃣ Выгода: Год занятий — цена смешная!💰</li>
+                                    <li>3️⃣ Дневной (7:00-17:00) — 600₽/мес (при покупке года).☀️</li>
+                                    <li>4️⃣ Полный — 800₽/мес (при покупке года).🌙</li>
+                                    <li>5️⃣ Цена заморожена на год! 🔒</li>
+                                    <li>6️⃣ Подарок: протеиновый коктейль при покупке! 🥤</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </SwiperSlide>
                     <SwiperSlide className=''>
                         <div className="rounded-md shadow-[0_0_10px_rgba(0,0,0,0.3)] p-4 m-2 md:m-4 flex flex-col md:flex-row items-center justify-center">
                             <Image src={stockImg1} className='w-full max-w-80 pointer-events-none mb-2 md:me-4 md:mb-0' alt='' />
