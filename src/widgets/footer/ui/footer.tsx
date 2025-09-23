@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const Footer: React.FC = () => {
     return (
-        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+        <footer className="row-start-3 flex flex-col gap-6 flex-wrap items-center justify-center">
             <div className="overflow-hidden w-full max-w-7xl p-6 lg:px-8 flex flex-wrap gap-6 items-center justify-between">
                 <Logo />
                 <SocialIcons className="" telegram vk whatsapp />
@@ -29,6 +29,9 @@ export const Footer: React.FC = () => {
                             </div>
                     </DialogContent>
                 </Dialog>
+            </div>
+            <div className="overflow-hidden w-full max-w-7xl p-6 lg:px-8 flex items-center justify-center">
+                <p className="text-center">ИП Баранов Николай Александрович и ИНН 540407560710</p>
             </div>
         </footer>
     );
