@@ -45,7 +45,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT || 22 }}
           source: "lemonfit.tar.gz"
-          target: "/home/lemonfitadmin/lemonfit"
+          target: "/root/lemonfit"
 
       # 👇 Распаковываем и перезапускаем pm2
       - name: Deploy on server via SSH
@@ -56,7 +56,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT || 22 }}
           script: |
-            cd /home/lemonfitadmin/lemonfit
+            cd /root/lemonfit
 
             # распаковать архив (перезаписывая файлы)
             tar -xzf lemonfit.tar.gz
