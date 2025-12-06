@@ -1,0 +1,69 @@
+name: Deploy Lemonfit
+
+on:
+  push:
+    branches:
+      - main   # или другая ветка деплоя
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Next.js app
+        run: npm run build
+
+      # 👇 пакуем только то, что нужно для запуска
+      - name: Archive production build
+        run: |
+          tar -czf lemonfit.tar.gz \
+            .next \
+            public \
+            package.json \
+            package-lock.json \
+            next.config.* \
+            .env.production || true
+
+      # 👇 Копируем архив на сервер
+      - name: Copy files to server via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          source: "lemonfit.tar.gz"
+          target: "/home/lemonfitadmin/lemonfit"
+
+      # 👇 Распаковываем и перезапускаем pm2
+      - name: Deploy on server via SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          script: |
+            cd /home/lemonfitadmin/lemonfit
+
+            # распаковать архив (перезаписывая файлы)
+            tar -xzf lemonfit.tar.gz
+
+            # на всякий случай — установить production-зависимости (если надо)
+            # npm ci --omit=dev
+
+            # перезапустить pm2-процесс
+            pm2 restart lemonfit || pm2 start npm --name lemonfit -- run start
+            pm2 save
