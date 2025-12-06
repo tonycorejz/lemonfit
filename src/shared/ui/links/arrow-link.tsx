@@ -7,7 +7,7 @@ type Props = {
 
 export const ArrowLink: React.FC<Props> = ({children, pClassNames, ...props}) => {
 
-    const content: JSX.Element = (
+    const content = (
         <>
             <p className={`font-sans font-bold standart-text text-nowrap text-sm me-4 ${pClassNames}`}>{children}</p>
             <svg width="32" height="13" viewBox="0 0 32 13" fill="#212121" stroke="#24A746" xmlns="http://www.w3.org/2000/svg">
