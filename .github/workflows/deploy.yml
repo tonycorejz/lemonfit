@@ -56,6 +56,13 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT || 22 }}
           script: |
+          # инициализация nvm для данного пользователя (root в твоём случае)
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+            # используем нужную версию node
+            nvm use 24.11.1
+            
             cd /root/lemonfit
 
             # распаковать архив (перезаписывая файлы)
