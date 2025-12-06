@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
                     <DialogTrigger asChild className="outline-0">
                         <ArrowLink href='#' className='cursor-pointer'>Прочитать отзывы о нас</ArrowLink>
                     </DialogTrigger>
-                    <DialogContent className="sm:max-w-[425px]">
+                    <DialogContent className="sm:max-w-[425px] bg-white">
                         <DialogHeader>
                             <DialogTitle>Отзывы о нас</DialogTitle>
                             <DialogDescription></DialogDescription> 

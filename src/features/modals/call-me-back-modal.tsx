@@ -18,7 +18,7 @@ export const CallMeBackModal: React.FC<Props> = ({children}) => {
             <DialogTrigger asChild className="outline-0">
                 {children}
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
+            <DialogContent className="sm:max-w-[425px] bg-white">
                 <DialogHeader>
                     <DialogTitle>Свяжитесь с нами</DialogTitle>
                     <DialogDescription></DialogDescription>

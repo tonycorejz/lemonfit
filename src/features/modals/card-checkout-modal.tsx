@@ -20,7 +20,7 @@ export const CardCheckoutModal: React.FC<Props> = ({children, card}) => {
             <DialogTrigger asChild className="outline-0">
                 {children}
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
+            <DialogContent className="sm:max-w-[425px] bg-white">
                 <DialogHeader>
                     <DialogTitle>Оформить карту</DialogTitle>
                     <DialogDescription></DialogDescription>
