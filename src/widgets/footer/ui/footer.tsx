@@ -13,13 +13,13 @@ import Link from "next/link";
 import { footerDocumentsData } from "../model/footer-documents-data";
 import { FooterDocuments } from "./footer-documents";
 
-const REVIEWS_LABEL = "\u041f\u0440\u043e\u0447\u0438\u0442\u0430\u0442\u044c \u043e\u0442\u0437\u044b\u0432\u044b \u043e \u043d\u0430\u0441";
-const REVIEWS_TITLE = "\u041e\u0442\u0437\u044b\u0432\u044b \u043e \u043d\u0430\u0441";
-const REVIEWS_2GIS = "\u041e\u0442\u0437\u044b\u0432\u044b \u0432 2 Gis \u279c";
-const REVIEWS_YANDEX = "\u041e\u0442\u0437\u044b\u0432\u044b \u0432 \u042f.\u041a\u0430\u0440\u0442\u0430\u0445 \u279c";
-const CONTACTS_LABEL = "\u0412\u044b \u0432\u0441\u0435\u0433\u0434\u0430 \u043c\u043e\u0436\u0435\u0442\u0435 \u0441\u0432\u044f\u0437\u0430\u0442\u044c\u0441\u044f \u0441 \u043d\u0430\u043c\u0438 \u043f\u043e \u043d\u043e\u043c\u0435\u0440\u0443:";
-const SOCIAL_LABEL = "\u041d\u0430\u0448\u0438 \u0441\u043e\u0446. \u0441\u0435\u0442\u0438:";
-const LEGAL_LABEL = "\u0418\u041f \u0411\u0430\u0440\u0430\u043d\u043e\u0432 \u041d\u0438\u043a\u043e\u043b\u0430\u0439 \u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440\u043e\u0432\u0438\u0447 \u0438 \u0418\u041d\u041d 540407560710";
+const REVIEWS_LABEL = "Прочитать отзывы о нас";
+const REVIEWS_TITLE = "Отзывы о нас";
+const REVIEWS_2GIS = "Отзывы в 2 Gis ➜";
+const REVIEWS_YANDEX = "Отзывы в Я.Картах ➜";
+const CONTACTS_LABEL = "Вы всегда можете связаться с нами по номеру:";
+const SOCIAL_LABEL = "Наши соц. сети:";
+const LEGAL_LABEL = "ИП Баранов Николай Александрович и ИНН 540407560710";
 
 export const Footer: React.FC = () => {
   return (
@@ -64,9 +64,9 @@ export const Footer: React.FC = () => {
           </DialogContent>
         </Dialog>
       </div>
-        <FooterDocuments documents={footerDocumentsData} />
+
       <div className="flex w-full max-w-7xl flex-col items-center justify-center overflow-hidden p-6 lg:px-8">
-        
+        <FooterDocuments documents={footerDocumentsData} />
         <p className="text-center">{LEGAL_LABEL}</p>
       </div>
     </footer>
