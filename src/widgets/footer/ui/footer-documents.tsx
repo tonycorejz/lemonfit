@@ -22,8 +22,6 @@ const CLOSE_LABEL = "Закрыть";
 export const FooterDocuments: React.FC<FooterDocumentsProps> = ({ documents }) => {
   const [openName, setOpenName] = useState<string | null>(null);
 
-  const formatTitle = (title: string) => title.toLocaleLowerCase("ru-RU");
-
   const openDocument = useMemo(
     () => documents.find((document) => document.name === openName) ?? null,
     [documents, openName]
@@ -43,7 +41,7 @@ export const FooterDocuments: React.FC<FooterDocumentsProps> = ({ documents }) =
           >
             <FileText />
             <span className="max-w-full overflow-hidden text-ellipsis whitespace-nowrap">
-              {formatTitle(document.title)}
+              {document.title}
             </span>
           </Button>
         ))}
@@ -52,7 +50,7 @@ export const FooterDocuments: React.FC<FooterDocumentsProps> = ({ documents }) =
       <Dialog open={Boolean(openDocument)} onOpenChange={(open) => !open && setOpenName(null)}>
         <DialogContent className="w-[95vw] max-w-3xl bg-white">
           <DialogHeader>
-            <DialogTitle>{openDocument ? formatTitle(openDocument.title) : DOCUMENT_LABEL}</DialogTitle>
+            <DialogTitle>{openDocument ? openDocument.title : DOCUMENT_LABEL}</DialogTitle>
           </DialogHeader>
 
           <div className="max-h-[70vh] overflow-y-auto rounded-md border p-4 text-sm whitespace-pre-wrap">
