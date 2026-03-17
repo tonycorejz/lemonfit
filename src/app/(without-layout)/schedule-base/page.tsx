@@ -3,8 +3,18 @@ import Script from "next/script";
 export default function ScheduleBase() {
   return (
     <div>
-      <div data-fit1c-calendar>Расписание работает на <a href="https://www.fitness1c.ru">1С:Фитнес клуб</a></div>
-      <Script src="https://reservi.ru/widget-fit1c.v2/js/config.js" data-fit-salon-id="288a1229-2774-4bdf-be32-76685b618ade"></Script>
+      <Script
+        src="https://reservi.ru/widget-fit1c.v4/public/init.js"
+        data-fit-apikey="288a1229-2774-4bdf-be32-76685b618ade"
+        data-type="schedule"
+        data-theme='light'
+        data-settings='{
+          "url_data": {
+            "club_id": "0da893b4-3941-11ef-9e09-00505683cb0f"
+          }
+        }'
+      >
+      </Script>
     </div>
   );
 }
