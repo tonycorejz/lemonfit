@@ -5,7 +5,7 @@ import { promises as fs } from 'fs';
 
 
 
-export const Prices: React.FC<HTMLProps<HTMLDivElement>> = async ({...props}) => {
+export const Prices: React.FC<HTMLProps<HTMLDivElement>> = async ({ ...props }) => {
 
     const priceCardsFile = await fs.readFile(process.cwd() + '/public/text-data/prices.json', 'utf8');
     const priceCards: PriceCard[] = JSON.parse(priceCardsFile);
@@ -18,7 +18,7 @@ export const Prices: React.FC<HTMLProps<HTMLDivElement>> = async ({...props}) =>
             <Title className=''>Клубные карты</Title>
             <div className="w-full mb-2 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {
-                    priceCards.map(card => 
+                    priceCards.map(card =>
                         <div key={card.title} className="w-full h-full px-3 py-4 flex flex-col items-center justify-between  text-standart-text  rounded-2xl border-2 border-[#24A746]">
                             <p className="text-[#24A943] text-2xl font-black leading-5 uppercase">{card.title}</p>
                             <p className="mb-2">{card.subtitle ?? '\u00A0'}</p>
@@ -39,11 +39,77 @@ export const Prices: React.FC<HTMLProps<HTMLDivElement>> = async ({...props}) =>
                     )
                 }
             </div>
+
+            <Title className='mt-8 mb-2'>Фитнес подписка</Title>
+            <div className="w-full mb-8 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                <div className="w-full h-full px-3 py-4 flex flex-col items-center justify-between text-standart-text rounded-2xl border-2 border-[#24A746]">
+                    <p className="text-[#24A943] text-2xl font-black leading-5 uppercase mb-6 text-center">Дневная</p>
+                    <div className="w-full flex flex-col mb-4">
+                        <div className="font-bold text-xl text-center">пн-пт 07:00-17:00</div>
+                        <div className="font-bold text-xl text-center">сб-вс 09:00-21:00</div>
+                    </div>
+
+                    <div className="w-full flex flex-col gap-2 mb-6 w-full">
+                        <div className="w-full flex flex-row items-center justify-between gap-2">
+                            <div className="font-bold text-xl">1-3 мес:</div>
+                            <div className="text-[#24A943] font-bold text-xl text-right">2399 руб/мес</div>
+                        </div>
+                        <div className="w-full flex flex-row items-center justify-between gap-2">
+                            <div className="font-bold text-xl">4-7 мес:</div>
+                            <div className="text-[#24A943] font-bold text-xl text-right">1899 руб/мес</div>
+                        </div>
+                        <div className="w-full flex flex-row items-center justify-between gap-2">
+                            <div className="font-bold text-xl">7-10 мес:</div>
+                            <div className="text-[#24A943] font-bold text-xl text-right">1699 руб/мес</div>
+                        </div>
+                        <div className="w-full flex flex-row items-center justify-between gap-2">
+                            <div className="font-bold text-xl">от 10 мес:</div>
+                            <div className="text-[#24A943] font-bold text-xl text-right">1499 руб/мес</div>
+                        </div>
+                    </div>
+
+                    <CardCheckoutModal card={{ title: "Фитнес подписка Дневная", full: { price: "2399 руб/мес", textInfo: "" } } as PriceCard}>
+                        <GetCardButton className="px-3 sm:px-4">Оформить</GetCardButton>
+                    </CardCheckoutModal>
+                </div>
+
+                <div className="w-full h-full px-3 py-4 flex flex-col items-center justify-between text-standart-text rounded-2xl border-2 border-[#24A746]">
+                    <p className="text-[#24A943] text-2xl font-black leading-5 uppercase mb-6 text-center">Полная</p>
+                    <div className="w-full flex flex-col mb-4">
+                        <div className="font-bold text-xl text-center">пн-пт 07:00-23:00</div>
+                        <div className="font-bold text-xl text-center">сб-вс 09:00-21:00</div>
+                    </div>
+
+                    <div className="w-full flex flex-col gap-2 mb-6 w-full">
+                        <div className="w-full flex flex-row items-center justify-between gap-2">
+                            <div className="font-bold text-xl">1-3 мес:</div>
+                            <div className="text-[#24A943] font-bold text-xl text-right">2999 руб/мес</div>
+                        </div>
+                        <div className="w-full flex flex-row items-center justify-between gap-2">
+                            <div className="font-bold text-xl">4-7 мес:</div>
+                            <div className="text-[#24A943] font-bold text-xl text-right">2499 руб/мес</div>
+                        </div>
+                        <div className="w-full flex flex-row items-center justify-between gap-2">
+                            <div className="font-bold text-xl">7-10 мес:</div>
+                            <div className="text-[#24A943] font-bold text-xl text-right">2199 руб/мес</div>
+                        </div>
+                        <div className="w-full flex flex-row items-center justify-between gap-2">
+                            <div className="font-bold text-xl">от 10 мес:</div>
+                            <div className="text-[#24A943] font-bold text-xl text-right">1899 руб/мес</div>
+                        </div>
+                    </div>
+
+                    <CardCheckoutModal card={{ title: "Фитнес подписка Полная", full: { price: "2999 руб/мес", textInfo: "" } } as PriceCard}>
+                        <GetCardButton className="px-3 sm:px-4">Оформить</GetCardButton>
+                    </CardCheckoutModal>
+                </div>
+            </div>
+
             <div className="relative overflow-hidden w-full px-4 py-6 rounded-2xl bg-trener-bg bg-no-repeat bg-cover md:bg-[length:50%_auto] bg-[right_-250px_center] sm:bg-[right_-300px_center] md:bg-[right_0_center]">
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black to-[#000000ad] sm:to-[#00000031] md:to-[#00000000] from-50%"></div>
                 <div className="relative w-full max-w-96 flex flex-col text-white">
                     {
-                        additionalPriceCards.map(aCard => 
+                        additionalPriceCards.map(aCard =>
                             <div key={aCard.title + aCard.price} className="w-full flex flex-row justify-between items-start mb-4">
                                 <div className="flex flex-col me-1">
                                     <div className="text-xl font-black leading-5">{aCard.title}</div>
