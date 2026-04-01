@@ -41,8 +41,8 @@ export const Prices: React.FC<HTMLProps<HTMLDivElement>> = async ({ ...props }) 
             </div>
 
             <Title className='mt-8 mb-2'>Фитнес подписка</Title>
-            <div className="w-full mb-8 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                <div className="w-full h-full px-3 py-4 flex flex-col items-center justify-between text-standart-text rounded-2xl border-2 border-[#24A746]">
+            <div className="w-full gap-2 mb-8 flex flex-wrap items-center justify-center">
+                <div className="w-full sm:w-[272px] h-full px-3 py-4 flex flex-col items-center justify-between text-standart-text rounded-2xl border-2 border-[#24A746]">
                     <p className="text-[#24A943] text-2xl font-black leading-5 uppercase mb-6 text-center">Дневная</p>
                     <div className="w-full flex flex-col mb-4">
                         <div className="font-bold text-xl text-center">пн-пт 07:00-17:00</div>
@@ -55,11 +55,11 @@ export const Prices: React.FC<HTMLProps<HTMLDivElement>> = async ({ ...props }) 
                             <div className="text-[#24A943] font-bold text-xl text-right">2399 руб/мес</div>
                         </div>
                         <div className="w-full flex flex-row items-center justify-between gap-2">
-                            <div className="font-bold text-xl">4-7 мес:</div>
+                            <div className="font-bold text-xl">4-6 мес:</div>
                             <div className="text-[#24A943] font-bold text-xl text-right">1899 руб/мес</div>
                         </div>
                         <div className="w-full flex flex-row items-center justify-between gap-2">
-                            <div className="font-bold text-xl">7-10 мес:</div>
+                            <div className="font-bold text-xl">7-9 мес:</div>
                             <div className="text-[#24A943] font-bold text-xl text-right">1699 руб/мес</div>
                         </div>
                         <div className="w-full flex flex-row items-center justify-between gap-2">
@@ -73,7 +73,7 @@ export const Prices: React.FC<HTMLProps<HTMLDivElement>> = async ({ ...props }) 
                     </CardCheckoutModal>
                 </div>
 
-                <div className="w-full h-full px-3 py-4 flex flex-col items-center justify-between text-standart-text rounded-2xl border-2 border-[#24A746]">
+                <div className="w-full sm:w-[272px] h-full px-3 py-4 flex flex-col items-center justify-between text-standart-text rounded-2xl border-2 border-[#24A746]">
                     <p className="text-[#24A943] text-2xl font-black leading-5 uppercase mb-6 text-center">Полная</p>
                     <div className="w-full flex flex-col mb-4">
                         <div className="font-bold text-xl text-center">пн-пт 07:00-23:00</div>
@@ -86,11 +86,11 @@ export const Prices: React.FC<HTMLProps<HTMLDivElement>> = async ({ ...props }) 
                             <div className="text-[#24A943] font-bold text-xl text-right">2999 руб/мес</div>
                         </div>
                         <div className="w-full flex flex-row items-center justify-between gap-2">
-                            <div className="font-bold text-xl">4-7 мес:</div>
+                            <div className="font-bold text-xl">4-6 мес:</div>
                             <div className="text-[#24A943] font-bold text-xl text-right">2499 руб/мес</div>
                         </div>
                         <div className="w-full flex flex-row items-center justify-between gap-2">
-                            <div className="font-bold text-xl">7-10 мес:</div>
+                            <div className="font-bold text-xl">7-9 мес:</div>
                             <div className="text-[#24A943] font-bold text-xl text-right">2199 руб/мес</div>
                         </div>
                         <div className="w-full flex flex-row items-center justify-between gap-2">
