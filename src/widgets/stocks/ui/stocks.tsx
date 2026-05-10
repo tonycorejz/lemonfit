@@ -14,7 +14,7 @@ import stockImg1 from '../../../../public/img/stocks/2.webp';
 import stockImg2 from '../../../../public/img/stocks/1.webp';
 import stockImg3 from '../../../../public/img/stocks/3.webp';
 
-export const Stocks: React.FC<HTMLProps<HTMLDivElement>> = ({...props}) => {
+export const Stocks: React.FC<HTMLProps<HTMLDivElement>> = ({ ...props }) => {
 
     return (
         <div {...props} className={`w-full max-w-7xl flex flex-col items-center sm:justify-between justify-center p-6 md:px-8 ${props.className}`}>
@@ -97,15 +97,21 @@ export const Stocks: React.FC<HTMLProps<HTMLDivElement>> = ({...props}) => {
                         <div className="rounded-md shadow-[0_0_10px_rgba(0,0,0,0.3)] p-4 m-2 md:m-4 flex flex-col md:flex-row items-center justify-center">
                             <Image src={stockImg1} className='w-full max-w-80 pointer-events-none mb-2 md:me-4 md:mb-0' alt='' />
                             <div className="">
-                                <p className="text-xl font-black mb-4">Первое занятие бесплатно!</p>
+                                <p className="text-xl font-black mb-4">Первая тренировка за 0 ₽! 🏎️</p>
                                 <p>
-                                    Впервые в нашем тренажёрном зале? Мы рады предложить вам уникальную возможность: первая тренировка абсолютно БЕСПЛАТНО!
-                                </p>
-                                <p> 
-                                    👨‍🏫 В рамках этой тренировки вы получите индивидуальный подход от нашего профессионального тренера. Он поможет вам составить план занятий, покажет правильную технику выполнения упражнений и ответит на все интересующие вопросы.
+                                    Хотите проверить нас на прочность? Без проблем!
                                 </p>
                                 <p>
-                                    🔥 Это отличная возможность оценить качество наших услуг, познакомиться с оборудованием и атмосферой зала, а также понять, подходит ли вам наш клуб.
+                                    Приходите, знакомьтесь с тренером и пробуйте тренажёры.
+                                </p>
+                                <p>
+                                    Условие всего одно: если покупаете любой абонемент в день первого визита — тренировка за наш счёт. Если решите, что штанга — это не ваше, просто оплатите разовое посещение (650 ₽).
+                                </p>
+                                <p>
+                                    Это как тест-драйв тачки: если покупаете, бензин в подарок. Справедливо? Справедливо.
+                                </p>
+                                <p>
+                                    Погнали тренироваться! 🍋💪
                                 </p>
                             </div>
                         </div>
