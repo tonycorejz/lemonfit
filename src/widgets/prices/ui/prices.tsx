@@ -49,7 +49,7 @@ export const Prices: React.FC<HTMLProps<HTMLDivElement>> = async ({ ...props }) 
                         <div className="font-bold text-xl text-center">сб-вс 09:00-21:00</div>
                     </div>
 
-                    <div className="w-full flex flex-col gap-2 mb-6 w-full">
+                    <div className="w-full flex flex-col gap-2 mb-6">
                         <div className="w-full flex flex-row items-center justify-between gap-2">
                             <div className="font-bold text-xl">1-3 мес:</div>
                             <div className="text-[#24A943] font-bold text-xl text-right">2399 руб/мес</div>
@@ -80,7 +80,7 @@ export const Prices: React.FC<HTMLProps<HTMLDivElement>> = async ({ ...props }) 
                         <div className="font-bold text-xl text-center">сб-вс 09:00-21:00</div>
                     </div>
 
-                    <div className="w-full flex flex-col gap-2 mb-6 w-full">
+                    <div className="w-full flex flex-col gap-2 mb-6">
                         <div className="w-full flex flex-row items-center justify-between gap-2">
                             <div className="font-bold text-xl">1-3 мес:</div>
                             <div className="text-[#24A943] font-bold text-xl text-right">2999 руб/мес</div>
