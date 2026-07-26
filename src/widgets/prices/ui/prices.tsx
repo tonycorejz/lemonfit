@@ -1,4 +1,3 @@
-import { CardCheckoutModal } from "@/features";
 import { PriceCard, GetCardButton, Title, AdditionalPrice } from "@/shared";
 import { HTMLProps } from "react";
 import { promises as fs } from 'fs';
@@ -32,9 +31,7 @@ export const Prices: React.FC<HTMLProps<HTMLDivElement>> = async ({ ...props }) 
                                 <div className="text-[#24A943] font-bold  text-xl">{card.full?.price}</div>
                             </div>
                             <div className="whitespace-pre-line mb-6">{card.full?.textInfo}</div>
-                            <CardCheckoutModal card={card}>
-                                <GetCardButton className="px-3 sm:px-4">Оформить</GetCardButton>
-                            </CardCheckoutModal>
+                            <GetCardButton href="/lk-base" className="px-3 sm:px-4">Оформить</GetCardButton>
                         </div>
                     )
                 }
@@ -68,9 +65,7 @@ export const Prices: React.FC<HTMLProps<HTMLDivElement>> = async ({ ...props }) 
                         </div>
                     </div>
 
-                    <CardCheckoutModal card={{ title: "Фитнес подписка Дневная", full: { price: "2399 руб/мес", textInfo: "" } } as PriceCard}>
-                        <GetCardButton className="px-3 sm:px-4">Оформить</GetCardButton>
-                    </CardCheckoutModal>
+                    <GetCardButton href="/lk-base" className="px-3 sm:px-4">Оформить</GetCardButton>
                 </div>
 
                 <div className="w-full sm:w-[272px] h-full px-3 py-4 flex flex-col items-center justify-between text-standart-text rounded-2xl border-2 border-[#24A746]">
@@ -99,9 +94,7 @@ export const Prices: React.FC<HTMLProps<HTMLDivElement>> = async ({ ...props }) 
                         </div>
                     </div>
 
-                    <CardCheckoutModal card={{ title: "Фитнес подписка Полная", full: { price: "2999 руб/мес", textInfo: "" } } as PriceCard}>
-                        <GetCardButton className="px-3 sm:px-4">Оформить</GetCardButton>
-                    </CardCheckoutModal>
+                    <GetCardButton href="/lk-base" className="px-3 sm:px-4">Оформить</GetCardButton>
                 </div>
             </div>
 
