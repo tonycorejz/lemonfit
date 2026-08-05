@@ -46,24 +46,21 @@ export const Prices: React.FC<HTMLProps<HTMLDivElement>> = async ({ ...props }) 
                         <div className="font-bold text-xl text-center">сб-вс 09:00-21:00</div>
                     </div>
 
-                    <div className="w-full flex flex-col gap-2 mb-6">
+                    <div className="w-full flex flex-col gap-2 mb-2">
                         <div className="w-full flex flex-row items-center justify-between gap-2">
-                            <div className="font-bold text-xl">1-3 мес:</div>
+                            <div className="font-bold text-xl">1 мес:</div>
                             <div className="text-[#24A943] font-bold text-xl text-right">2399 руб/мес</div>
                         </div>
                         <div className="w-full flex flex-row items-center justify-between gap-2">
-                            <div className="font-bold text-xl">4-6 мес:</div>
-                            <div className="text-[#24A943] font-bold text-xl text-right">1899 руб/мес</div>
-                        </div>
-                        <div className="w-full flex flex-row items-center justify-between gap-2">
-                            <div className="font-bold text-xl">7-9 мес:</div>
-                            <div className="text-[#24A943] font-bold text-xl text-right">1699 руб/мес</div>
+                            <div className="font-bold text-xl">5 мес:</div>
+                            <div className="text-[#24A943] font-bold text-xl text-right">1999 руб/мес</div>
                         </div>
                         <div className="w-full flex flex-row items-center justify-between gap-2">
                             <div className="font-bold text-xl">от 10 мес:</div>
                             <div className="text-[#24A943] font-bold text-xl text-right">1499 руб/мес</div>
                         </div>
                     </div>
+                    <div className="w-full text-center text-sm mb-6 opacity-80">Цена снижается на 100₽ каждый месяц</div>
 
                     <GetCardButton href="/lk-base" className="px-3 sm:px-4">Оформить</GetCardButton>
                 </div>
@@ -75,24 +72,21 @@ export const Prices: React.FC<HTMLProps<HTMLDivElement>> = async ({ ...props }) 
                         <div className="font-bold text-xl text-center">сб-вс 09:00-21:00</div>
                     </div>
 
-                    <div className="w-full flex flex-col gap-2 mb-6">
+                    <div className="w-full flex flex-col gap-2 mb-2">
                         <div className="w-full flex flex-row items-center justify-between gap-2">
-                            <div className="font-bold text-xl">1-3 мес:</div>
+                            <div className="font-bold text-xl">1 мес:</div>
                             <div className="text-[#24A943] font-bold text-xl text-right">2999 руб/мес</div>
                         </div>
                         <div className="w-full flex flex-row items-center justify-between gap-2">
-                            <div className="font-bold text-xl">4-6 мес:</div>
+                            <div className="font-bold text-xl">6 мес:</div>
                             <div className="text-[#24A943] font-bold text-xl text-right">2499 руб/мес</div>
                         </div>
                         <div className="w-full flex flex-row items-center justify-between gap-2">
-                            <div className="font-bold text-xl">7-9 мес:</div>
-                            <div className="text-[#24A943] font-bold text-xl text-right">2199 руб/мес</div>
-                        </div>
-                        <div className="w-full flex flex-row items-center justify-between gap-2">
-                            <div className="font-bold text-xl">от 10 мес:</div>
-                            <div className="text-[#24A943] font-bold text-xl text-right">1899 руб/мес</div>
+                            <div className="font-bold text-xl">от 11 мес:</div>
+                            <div className="text-[#24A943] font-bold text-xl text-right">1999 руб/мес</div>
                         </div>
                     </div>
+                    <div className="w-full text-center text-sm mb-6 opacity-80">Цена снижается на 100₽ каждый месяц</div>
 
                     <GetCardButton href="/lk-base" className="px-3 sm:px-4">Оформить</GetCardButton>
                 </div>
