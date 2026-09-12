@@ -13,6 +13,7 @@ import Image from 'next/image';
 import stockImg1 from '../../../../public/img/stocks/2.webp';
 import stockImg2 from '../../../../public/img/stocks/1.webp';
 import stockImg3 from '../../../../public/img/stocks/3.webp';
+import stockImg4 from '../../../../public/img/stocks/4.png';
 
 export const Stocks: React.FC<HTMLProps<HTMLDivElement>> = ({ ...props }) => {
 
@@ -38,6 +39,24 @@ export const Stocks: React.FC<HTMLProps<HTMLDivElement>> = ({ ...props }) => {
                     className="w-full overflow-y-auto"
                     zoom={true}
                 >
+                    <SwiperSlide>
+                        <div className="rounded-md shadow-[0_0_10px_rgba(0,0,0,0.3)] p-4 m-2 md:m-4 flex flex-col md:flex-row items-center justify-center">
+                            <Image src={stockImg4} className='w-full max-w-80 h-auto max-h-[268px] object-contain shrink-0 pointer-events-none mb-2 md:me-4 md:mb-0' sizes="(max-width: 400px) 100vw, 320px" alt='LemonFit — 7 лет! Подписка за 1999 ₽ с первого месяца, с 11 по 20 сентября. Только 30 мест.' />
+                            <div className="min-w-0 space-y-2">
+                                <p className="text-xl font-black">Мы посчитали, сколько потеряем на этой акции. Всё равно запускаем.</p>
+                                <p>
+                                    Смотрите, в чём фокус. Наша подписка дешевеет со временем: с 2999 до 1999, но путь занимает десять месяцев. Логично — кто дольше ходит, тот меньше платит.
+                                </p>
+                                <p>
+                                    Нам семь лет, и в честь этого мы просто выкидываем лесенку. Новенький платит 1999 с первого месяца, как будто ходит к нам с позапрошлого года.
+                                </p>
+                                <p>
+                                    Мест 30, потому что дальше начинается математика, а с ней у нас не сложилось.
+                                </p>
+                                <p className="font-bold">С 11 по 20 сентября</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
                     {/* <SwiperSlide className=''>
                         <div className="rounded-md shadow-[0_0_10px_rgba(0,0,0,0.3)] p-4 m-2 md:m-4 flex flex-col md:flex-row items-center justify-center">
                             <Image src={stockImg3} className='w-full max-w-80 pointer-events-none mb-2 md:me-4 md:mb-0' alt='' />
