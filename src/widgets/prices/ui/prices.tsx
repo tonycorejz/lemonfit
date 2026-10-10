@@ -14,31 +14,8 @@ export const Prices: React.FC<HTMLProps<HTMLDivElement>> = async ({ ...props }) 
 
     return (
         <div {...props} className={`w-full max-w-7xl flex flex-col p-6 lg:px-8 ${props.className}`}>
-            <Title className=''>Клубные карты</Title>
-            <div className="w-full mb-2 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                {
-                    priceCards.map(card =>
-                        <div key={card.title} className="w-full h-full px-3 py-4 flex flex-col items-center justify-between  text-standart-text  rounded-2xl border-2 border-[#24A746]">
-                            <p className="text-[#24A943] text-2xl font-black leading-5 uppercase">{card.title}</p>
-                            <p className="mb-2">{card.subtitle ?? '\u00A0'}</p>
-                            <div className="w-full flex flex-row justify-between">
-                                <div className="font-bold text-xl">Дневной</div>
-                                <div className="text-[#24A943] font-bold  text-xl">{card.onlyDay?.price}</div>
-                            </div>
-                            <div className="whitespace-pre-line mb-4">{card.onlyDay?.textInfo}</div>
-                            <div className="w-full flex flex-row justify-between">
-                                <div className="font-bold text-xl">Полный</div>
-                                <div className="text-[#24A943] font-bold  text-xl">{card.full?.price}</div>
-                            </div>
-                            <div className="whitespace-pre-line mb-6">{card.full?.textInfo}</div>
-                            <GetCardButton href="/lk-base" className="px-3 sm:px-4">Оформить</GetCardButton>
-                        </div>
-                    )
-                }
-            </div>
-
             <Title className='mt-8 mb-2'>Фитнес подписка</Title>
-            <div className="w-full gap-2 mb-8 flex flex-wrap items-center justify-center">
+            <div className="w-full mb-2 gap-2 flex flex-wrap items-center justify-center">
                 <div className="w-full sm:w-[272px] h-full px-3 py-4 flex flex-col items-center justify-between text-standart-text rounded-2xl border-2 border-[#24A746]">
                     <p className="text-[#24A943] text-2xl font-black leading-5 uppercase mb-6 text-center">Дневная</p>
                     <div className="w-full flex flex-col mb-4">
@@ -90,6 +67,29 @@ export const Prices: React.FC<HTMLProps<HTMLDivElement>> = async ({ ...props }) 
 
                     <GetCardButton href="/lk-base" className="px-3 sm:px-4">Оформить</GetCardButton>
                 </div>
+            </div>
+
+            <Title className=''>Клубные карты</Title>
+            <div className="w-full mb-8 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                {
+                    priceCards.map(card =>
+                        <div key={card.title} className="w-full h-full px-3 py-4 flex flex-col items-center justify-between  text-standart-text  rounded-2xl border-2 border-[#24A746]">
+                            <p className="text-[#24A943] text-2xl font-black leading-5 uppercase">{card.title}</p>
+                            <p className="mb-2">{card.subtitle ?? '\u00A0'}</p>
+                            <div className="w-full flex flex-row justify-between">
+                                <div className="font-bold text-xl">Дневной</div>
+                                <div className="text-[#24A943] font-bold  text-xl">{card.onlyDay?.price}</div>
+                            </div>
+                            <div className="whitespace-pre-line mb-4">{card.onlyDay?.textInfo}</div>
+                            <div className="w-full flex flex-row justify-between">
+                                <div className="font-bold text-xl">Полный</div>
+                                <div className="text-[#24A943] font-bold  text-xl">{card.full?.price}</div>
+                            </div>
+                            <div className="whitespace-pre-line mb-6">{card.full?.textInfo}</div>
+                            <GetCardButton href="/lk-base" className="px-3 sm:px-4">Оформить</GetCardButton>
+                        </div>
+                    )
+                }
             </div>
 
             <div className="relative overflow-hidden w-full px-4 py-6 rounded-2xl bg-trener-bg bg-no-repeat bg-cover md:bg-[length:50%_auto] bg-[right_-250px_center] sm:bg-[right_-300px_center] md:bg-[right_0_center]">
