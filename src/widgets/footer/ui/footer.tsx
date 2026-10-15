@@ -19,7 +19,7 @@ const REVIEWS_2GIS = "Отзывы в 2 Gis ➜";
 const REVIEWS_YANDEX = "Отзывы в Я.Картах ➜";
 const CONTACTS_LABEL = "Вы всегда можете связаться с нами по номеру:";
 const SOCIAL_LABEL = "Наши соц. сети:";
-const LEGAL_LABEL = "ИП Баранов Николай Александрович и ИНН 540407560710";
+const LEGAL_LABEL = "ИП Баранов Роман Николаевич и ИНН 540432317565";
 
 export const Footer: React.FC = () => {
   return (
