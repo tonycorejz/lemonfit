@@ -70,10 +70,10 @@ export const Prices: React.FC<HTMLProps<HTMLDivElement>> = async ({ ...props }) 
             </div>
 
             <Title className=''>Клубные карты</Title>
-            <div className="w-full mb-8 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div className="w-full mb-8 gap-2 flex flex-wrap items-stretch justify-center">
                 {
                     priceCards.map(card =>
-                        <div key={card.title} className="w-full h-full px-3 py-4 flex flex-col items-center justify-between  text-standart-text  rounded-2xl border-2 border-[#24A746]">
+                        <div key={card.title} className="w-full sm:w-[272px] px-3 py-4 flex flex-col items-center justify-between  text-standart-text  rounded-2xl border-2 border-[#24A746]">
                             <p className="text-[#24A943] text-2xl font-black leading-5 uppercase">{card.title}</p>
                             <p className="mb-2">{card.subtitle ?? '\u00A0'}</p>
                             <div className="w-full flex flex-row justify-between">
